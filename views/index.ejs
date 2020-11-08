@@ -8,17 +8,45 @@
 <body>
 
     <form action="/" method="POST">
-    <input type="text" name="name">
-    <button>SUBMIT IT</button>
+    <input type="text" name='val' value="">
+    <button class="submit">Search Player</button>
     </form>
 
 
     <% array.forEach(players =>{%> 
 
-        <img src="" alt="" srcset="<%= players %> ">
+        <img class="img" src="" alt="" srcset="<%= players %> ">
 
         <% }) %> 
       
+        <script>
+
+            const img = document.querySelectorAll('img');
+            const submit = document.querySelector('submit');
+
+            // submit.onclick = deleteImages();
+
+        
+                img.forEach(img =>{
+                   
+                    img.onmouseover = function(){
+
+                        img.style.opacity = '50%';
+
+                    }
+
+                    img.onmouseleave = function(){
+
+                    img.style.opacity = '100%';
+
+                    }
+
+                })
+           
+
+            
+            
+        </script>
     
 </body>
 </html>
